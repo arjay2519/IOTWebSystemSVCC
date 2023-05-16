@@ -1,0 +1,104 @@
+/* Sidebar Styling */
+.sidebar-brand{
+    margin: 0rem 0 1rem 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 63, 1), rgba(255, 17, 17, 1))
+}
+.sidebar-brand .sidebar-brand-icon{
+    margin: 2rem 0 0rem 0;
+    content:url("../img/svcclogo.png");
+    object-fit: contain;
+    max-width: 100%;
+    height: 120px;
+}
+.sidebar{
+    background: linear-gradient(to bottom, rgba(255, 17, 17, 1), rgba(255, 17, 17, 1));
+}
+.table {
+    overflow-x: hidden !important;
+}
+.topbar {
+    background: linear-gradient(rgba(255, 250, 63, 1), rgba(255, 17, 17, 1));
+}
+#content {
+    background: linear-gradient(red, red);/*maroon rgba(164,45,45,1)*/
+    color: white;
+}
+.hamburger {
+    visibility: hidden !important;
+}
+.hide_column {
+    display : none;
+}
+
+.room_on{
+    background-color: green;
+}
+
+#tooltip{
+    position: relative;
+    cursor: pointer;
+    border-bottom: 2px;
+    padding: 7px;
+    font-weight: bold;
+    font-family: sans-serif;
+        z-index: 1;
+}
+#tooltipText{
+    position: absolute;
+    width: 250px;
+    justify-content: center;
+    top: 0;
+    transform: translate(-50%,5%);
+    background-color: #000;
+    color: #fff;
+    padding: 5px 5px;
+    border-radius: 7px;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+#tooltipText::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(50%);
+    border: 15px solid;
+    border-color: #000 #0000 #0000 #0000;
+}
+#tooltip:hover #tooltipText{
+    top: -300%;
+    visibility: visible;
+    opacity: 1;
+}
+
+@media only screen and (max-width:800px){
+    .h2 {
+        font-size: 20px !important;
+    }
+    .hamburger {
+        visibility: visible !important;
+    }
+    .container-fluid {
+        margin-top: 100px;
+    }
+    #accordionSidebar {
+        margin-top: 70px;
+        position: fixed;
+        z-index: 999;
+    }
+    #tooltipText{
+    position: absolute;
+    justify-content: center;
+    width: 200px;
+    top: 0;
+    transform: translate(-35%,-20%);
+    background-color: #000;
+    color: #fff;
+    padding: 5px 5px;
+    border-radius: 7px;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+    }
+}
